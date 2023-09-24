@@ -1,4 +1,4 @@
-name: Demo
+name: 'CI'
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
           with:
             node-version: '18.x'
         
-        - run: mpn ci
+        - run: npm ci
 
         - name: Run lint
           run: npm run lint
