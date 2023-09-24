@@ -19,7 +19,7 @@ jobs:
           with:
             node-version: '18.x'
             
-        # - run: npm i
+        - run: npm i
         - run: npm ci
 
         - name: Run lint
