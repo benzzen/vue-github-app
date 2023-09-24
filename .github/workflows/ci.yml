@@ -36,14 +36,14 @@ jobs:
           node-version: [16.x,18.x]
 
       steps:
-        - uses: action/checkout@v4
+        - uses: actions/checkout@v4
 
         - name: nodejs version ${{ matrix.node-version }}
           uses: actions/setup-node@v3
           with:
             node-version: ${{ matrix.node-version }}
             cache: 'npm'
-            
+
         - run: npm i
         - run: npm ci
 
