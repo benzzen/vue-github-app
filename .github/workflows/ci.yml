@@ -11,12 +11,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
-
-        - name: set nodejs version to 18.15.0
-          uses: actions/setup-node@v3
+        - uses: actions/setup-node@v3
           with:
-            node-version: '18.15.0'
-        
+            node-version: 18
         - run: npm ci
 
         - name: Run lint
